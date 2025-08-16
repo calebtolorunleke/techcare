@@ -1,0 +1,5 @@
+@import "tailwindcss";
+body {
+  background: #f3f3f5 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
