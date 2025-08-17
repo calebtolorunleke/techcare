@@ -1,4 +1,5 @@
 import React from "react";
+import respiratory from "../Images/respiratoryImage.svg";
 import {
   LineChart,
   Line,
@@ -20,10 +21,10 @@ const data = [
 
 const Diagnosisgraph = () => {
   return (
-    <section className="bg-white py-5 px-1 rounded-xl">
+    <section className="bg-white py-2 px-2 rounded-xl">
       <h1>Diagnosis History</h1>
       {/* Graph */}
-      <div className="w-full h-64 mt-6">
+      <div className="w-full h-64 mt-3">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={data}
@@ -43,7 +44,26 @@ const Diagnosisgraph = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <div>a</div>
+      <div className="flex flex-row justify-between gap-3">
+        <div className="flex flex-col gap-2 bg-blue-200 py-2 px-2 rounded-lg w-full">
+          <img src={respiratory} alt="" className="w-15 h-15" />
+          <h5 className="">Respiratory Rate</h5>
+          <h1 className="font-bold text-xl">20 bpm</h1>
+          <span>Normal</span>
+        </div>
+        <div className="flex flex-col gap-2 bg-blue-200 py-2 px-2 rounded-lg w-full">
+          <img src={respiratory} alt="" className="w-15 h-15" />
+          <h5 className="">Respiratory Rate</h5>
+          <h1 className="font-bold text-xl">20 bpm</h1>
+          <span>Normal</span>
+        </div>
+        <div className="flex flex-col gap-2 bg-blue-200 py-2 px-2 rounded-lg w-full">
+          <img src={respiratory} alt="" className="w-15 h-15" />
+          <h5 className="">Respiratory Rate</h5>
+          <h1 className="font-bold text-xl">20 bpm</h1>
+          <span>Normal</span>
+        </div>
+      </div>
     </section>
   );
 };
