@@ -21,6 +21,7 @@ const data = [
 const Diagnosisgraph = () => {
   return (
     <section className="bg-white py-5 px-8">
+      <h1>Diagnosis History</h1>
       {/* Graph */}
       <div className="w-full h-64 mt-6">
         <ResponsiveContainer width="100%" height="100%">
