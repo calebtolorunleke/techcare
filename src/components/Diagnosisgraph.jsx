@@ -20,7 +20,7 @@ const data = [
 
 const Diagnosisgraph = () => {
   return (
-    <section className="bg-white py-5 px-8">
+    <section className="bg-white py-5 px-1 rounded-xl">
       <h1>Diagnosis History</h1>
       {/* Graph */}
       <div className="w-full h-64 mt-6">
@@ -43,6 +43,7 @@ const Diagnosisgraph = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
+      <div>a</div>
     </section>
   );
 };
