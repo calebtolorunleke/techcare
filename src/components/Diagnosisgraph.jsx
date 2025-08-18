@@ -27,9 +27,9 @@ const Diagnosisgraph = () => {
     <section className="bg-white py-2 px-2 rounded-xl">
       <h1>Diagnosis History</h1>
       {/* Graph */}
-      <div className="bg-white rounded-xl p-4 shadow-md w-full h-[350px]">
-        <h2 className="font-bold mb-4">Blood Pressure History</h2>
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="bg-white rounded-xl p-4 shadow-md w-full h-[250px]">
+        <h2 className="font-bold mb-2">Blood Pressure History</h2>
+        <ResponsiveContainer width="100%" height="85%">
           <LineChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="date" />
@@ -38,28 +38,22 @@ const Diagnosisgraph = () => {
               ticks={[60, 80, 100, 120, 140, 160, 180]}
             />
             <Tooltip />
-            <Legend
-              verticalAlign="top"
-              align="right"
-              wrapperStyle={{ paddingBottom: "10px" }}
-            />
-            {/* First Line */}
+            <Legend verticalAlign="top" align="right" />
             <Line
               type="monotone"
               name="Systolic"
               dataKey="value1"
               stroke="#8884d8"
               strokeWidth={2}
-              activeDot={{ r: 8 }}
+              activeDot={{ r: 6 }}
             />
-            {/* Second Line */}
             <Line
               type="monotone"
               name="Diastolic"
               dataKey="value2"
               stroke="#82ca9d"
               strokeWidth={2}
-              activeDot={{ r: 8 }}
+              activeDot={{ r: 6 }}
             />
           </LineChart>
         </ResponsiveContainer>
