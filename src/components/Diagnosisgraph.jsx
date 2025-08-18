@@ -14,13 +14,12 @@ import {
 } from "recharts";
 
 const data = [
-  { date: "April, 2024", cases: 180 },
-  { date: "Mar, 2024", cases: 160 },
-  { date: "Feb, 2024", cases: 140 },
-  { date: "Jan, 2024", cases: 120 },
-  { date: "Dec,2023", cases: 100 },
-  { date: "Nov,2023", cases: 80 },
-  { date: "Oct-2023", cases: 60 },
+  { date: "Oct 2023", value1: 120, value2: 120 },
+  { date: "Nov 2023", value1: 140, value2: 118 },
+  { date: "Dec 2023", value1: 100, value2: 160 },
+  { date: "Jan 2024", value1: 160, value2: 110 },
+  { date: "Feb 2024", value1: 80, value2: 150 },
+  { date: "Mar 2024", value1: 180, value2: 158 },
 ];
 
 const Diagnosisgraph = () => {
@@ -28,22 +27,39 @@ const Diagnosisgraph = () => {
     <section className="bg-white py-2 px-2 rounded-xl">
       <h1>Diagnosis History</h1>
       {/* Graph */}
-      <div className="w-full h-64 mt-3">
+      <div className="bg-white rounded-xl p-4 shadow-md w-full h-[350px]">
+        <h2 className="font-bold mb-4">Blood Pressure History</h2>
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            data={data}
-            margin={{ top: 5, right: 20, left: 0, bottom: 5 }}
-          >
+          <LineChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="date" />
-            <YAxis />
+            <YAxis
+              domain={[60, 180]}
+              ticks={[60, 80, 100, 120, 140, 160, 180]}
+            />
             <Tooltip />
-            <Legend />
+            <Legend
+              verticalAlign="top"
+              align="right"
+              wrapperStyle={{ paddingBottom: "10px" }}
+            />
+            {/* First Line */}
             <Line
               type="monotone"
-              dataKey="cases"
+              name="Systolic"
+              dataKey="value1"
               stroke="#8884d8"
               strokeWidth={2}
+              activeDot={{ r: 8 }}
+            />
+            {/* Second Line */}
+            <Line
+              type="monotone"
+              name="Diastolic"
+              dataKey="value2"
+              stroke="#82ca9d"
+              strokeWidth={2}
+              activeDot={{ r: 8 }}
             />
           </LineChart>
         </ResponsiveContainer>
