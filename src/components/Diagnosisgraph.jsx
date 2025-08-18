@@ -14,11 +14,13 @@ import {
 } from "recharts";
 
 const data = [
-  { date: "2025-01-01", cases: 2 },
-  { date: "2025-02-01", cases: 5 },
-  { date: "2025-03-01", cases: 3 },
-  { date: "2025-04-01", cases: 6 },
-  { date: "2025-05-01", cases: 4 },
+  { date: "April, 2024", cases: 180 },
+  { date: "Mar, 2024", cases: 160 },
+  { date: "Feb, 2024", cases: 140 },
+  { date: "Jan, 2024", cases: 120 },
+  { date: "Dec,2023", cases: 100 },
+  { date: "Nov,2023", cases: 80 },
+  { date: "Oct-2023", cases: 60 },
 ];
 
 const Diagnosisgraph = () => {
