@@ -24,7 +24,7 @@ const data = [
 
 const Diagnosisgraph = () => {
   return (
-    <section className="bg-white py-2 px-2 rounded-xl">
+    <section className="bg-white flex flex-col gap-2 py-2 px-2 rounded-xl">
       <h1>Diagnosis History</h1>
       {/* Graph */}
       <div className="bg-white rounded-xl p-4 shadow-md w-full h-[250px]">
