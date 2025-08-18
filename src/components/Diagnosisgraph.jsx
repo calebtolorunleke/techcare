@@ -1,5 +1,7 @@
 import React from "react";
 import respiratory from "../Images/respiratoryImage.svg";
+import temperature from "../Images/temperature.svg";
+import heartrate from "../Images/respiratoryimage.svg";
 import {
   LineChart,
   Line,
