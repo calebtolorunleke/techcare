@@ -56,7 +56,7 @@ const Diagnosisgraph = () => {
         <div className="flex flex-col gap-2 bg-blue-200 py-2 px-2 rounded-lg w-full">
           <img src={temperature} alt="" className="w-15 h-15" />
           <h5 className="text-sm">Respiratory Rate</h5>
-          <h1 className="font-bold text-xl">20 bpm</h1>
+          <h1 className="font-bold text-xl">98.6&deg;F</h1>
           <span className="text-sm">Normal</span>
         </div>
         <div className="flex flex-col gap-2 bg-blue-200 py-2 px-2 rounded-lg w-full">
