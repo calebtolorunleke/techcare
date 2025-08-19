@@ -6,15 +6,15 @@ const Diagnosis = () => {
   const { selectedPatient } = useData();
   if (!selectedPatient) {
     return (
-      <section className="w-[25%] flex items-center justify-center text-gray-400 bg-white">
+      <section className="w-[25%] flex items-center justify-center text-gray-400 bg-white rounded-xl">
         Select a patient to view details
       </section>
     );
   }
   return (
-    <section className="flex flex-col gap-2 bg- w-[50%]">
+    <section className="flex flex-col gap-2 w-[50%] h-[60vh]">
       <Diagnosisgraph />
-      <div className="rounded-xl bg-white py-2 px-[1rem] flex flex-col gap-5 w-[full]">
+      <div className="rounded-xl bg-white py-2 px-[1rem] flex flex-col gap-5 w-full">
         <h1 className="font-bold">Diagnotic List</h1>
         <div>
           <div className="w-full space-y-1">
@@ -26,7 +26,7 @@ const Diagnosis = () => {
             </div>
 
             {/* Rows */}
-            <div className="overflow-y-auto max-h-[185px]">
+            <div className="overflow-y-auto max-h-[5rem]">
               {selectedPatient.diagnostic_list.map((diagnostic, index) => (
                 <div
                   className="grid grid-cols-6 p-3 border-b border-b-gray-200"

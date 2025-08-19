@@ -12,7 +12,7 @@ const Profiledisplay = () => {
 
   if (!selectedPatient) {
     return (
-      <section className="w-[25%] flex items-center justify-center text-gray-400 bg-white">
+      <section className="w-[25%] flex items-center justify-center text-gray-400 bg-white rounded-xl">
         Select a patient to view details
       </section>
     );
